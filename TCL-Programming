@@ -1,3 +1,5 @@
+A. variables
+
 # Variables in TCL
 set <variable_name> <variable_value>
 
@@ -37,7 +39,9 @@ set pie [expr 22.0/7]
 set area [expr $pie*$radius*$radius]
 puts "Area of circle: $area"
 
-#if-else
+B. Conditional and Looping Statements
+
+# if-else
 Example 1:
 set x 10
 if { $x < 50 } {
@@ -64,6 +68,8 @@ for {set i 0} { $i < 10} { incr i} {
 puts $i
 }
 
+C. Array
+
 # array
 Example 1:
 set a(0) 10
@@ -72,6 +78,8 @@ puts $a(0)
 #Another Way
 array set b {10,30}
 puts $b(0)
+
+D. Procedure
 
 # Procedure
 proc fact { a } {
@@ -94,7 +102,8 @@ proc demo { } {
 demo
 puts $x
 
-# File handling
+E. File Handling
+
 # For opening file
 # open <file_name> <acc_type>
 open one.txt r
@@ -103,7 +112,7 @@ open one.txt r
 set f_in [open one.txt r]  
 
 # Syntax for writing in file.
-# puts <file_handle> <data|variable_value>
+puts <file_handle> <data|variable_value>
  
 set f [open one.txt w]
 puts $f "welcome to tcl"
