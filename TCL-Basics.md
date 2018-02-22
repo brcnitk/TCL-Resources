@@ -158,9 +158,9 @@ puts $x
 ```
 ## File Handling
 
-**File opening*
+**File opening**
 ```
-# open <file_name> <acc_type>
+#open <file_name> <acc_type>
 open one.txt r
 ```
  
