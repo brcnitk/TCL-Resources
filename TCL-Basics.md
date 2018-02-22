@@ -1,5 +1,18 @@
 ## Variable
 
+**Special variables**
+
+- argc  - Refers to a number of command-line arguments.
+- argv  - Refers to the list containing the command -line arguments.
+- argv0 - Refers to the file name of the file being interpreted or the name by which we invoke the script.
+- env   - Used for representing the array of elements that are environmental variables.
+- tcl_version - Returns the current version of the Tcl interpreter.
+
+```
+puts $tcl_version
+puts $env(PATH)
+```
+
 **Initializing variables**
 
 ```
@@ -55,7 +68,7 @@ puts "Area of circle: $area"
 
 ## Conditional and Looping Statements
 
-**if-else**
+**if and if-else**
 ```
 Example 1:
 set x 10
@@ -89,9 +102,17 @@ for {set i 0} { $i < 10} { incr i} {
 puts $i
 }
 ```
+**List**
+List is nothing but a group of elements. A group of words either using double quotes or curly braces can be used to represent a simple list. 
+```
+set myVariable {red green blue}
+puts [lindex $myVariable 2]
+set myVariable "red green blue"
+puts [lindex $myVariable 1]
+```
+**Associative arrays**
 
-## Array
-
+Associative arrays have an index (key) that is not necess arily an integer. It is generally a string that acts like key value pairs. 
 ```
 Example 1:
 set a(0) 10
@@ -100,8 +121,15 @@ puts $a(0)
 ```
 ```
 Example 2:
-array set b {10,30}
+set b {10,30}
 puts $b(0)
+```
+```
+Example 3:
+set marks(english) 80
+puts $marks(english)
+set marks(mathematics) 90
+puts $marks(mathematics)
 ```
 
 ## Procedure
