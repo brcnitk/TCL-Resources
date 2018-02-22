@@ -11,13 +11,16 @@ set name "abcd"
 set price 12.2
 ```
 
-# Returning a value of a variable
+** Returning a value of a variable**
+```
 set a
+```
 
-# Using value of variable
+**Using value of variable**
+```
 set y $x
 puts $y
-
+```
 # Using puts
 set x 10
 set y 20
