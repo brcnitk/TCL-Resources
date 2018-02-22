@@ -110,6 +110,32 @@ puts [lindex $myVariable 2]
 set myVariable "red green blue"
 puts [lindex $myVariable 1]
 ```
+**Appending item to alist**
+```
+set var orange 
+append var " " "blue"
+lappend var "red"
+lappend var "green"
+puts $var
+```
+
+**Length of list**
+```
+set var {orange blue red green}
+puts [llength $var]
+```
+**List item at index**
+```
+set var {orange blue red green}
+puts [lindex $var 1]
+```
+
+**Inser item at index**
+```
+set var {orange blue red green}
+set var [linsert  $var 3 black white]
+puts $var
+```
 **Associative arrays**
 
 Associative arrays have an index (key) that is not necess arily an integer. It is generally a string that acts like key value pairs. 
@@ -147,6 +173,12 @@ puts [array names personA]
 ```
 
 ## Procedure
+```
+Synatx:
+proc procedureName {arguments}{
+  body
+}
+```
 
 ```
 proc fact { a } {
@@ -158,6 +190,27 @@ proc fact { a } {
 }
 # Calling procedure
 fact 5
+```
+
+**Procedure with multiple argumets**
+```
+proc add {a b} {
+  return [ expr $a + $b]
+}
+puts [add 10 30]
+```
+**Procedure with variable arguments**
+```
+proc avg {numbers} {
+  set sum 0
+  foreach number $numbers {
+    set sum  [expr $sum + $number]
+  }
+  set average [expr $sum /[llength $numbers]]
+  return $average
+}
+puts [avg {70 80 50 60}]
+puts [avg {70 80 50 }]
 ```
 
 **Golabl variable in procedure**
@@ -172,33 +225,23 @@ puts $x
 ```
 ## File Handling
 
-**File opening**
+``#open <file_name> <acc_type>``
+
+**Writing a file**
+
 ```
-#open <file_name> <acc_type>
-open one.txt r
-```
- 
-**For assigning open file handle to variable**
-```
-set f_in [open one.txt r]  
+set fp [open "input.txt" w+]
+puts $fp "test"
+close $fp
 ```
 
-**Syntax for writing in file**
-```
-puts <file_handle> <data|variable_value>
-```
-```
-set f [open one.txt w]
-puts $f "welcome to tcl"
-close $f
-```
 **Reading file**
 ```
-# gets <file_handle> <variable_value>
- 
-set f [open one.txt r]
-gets $f data
- 
-puts $data
-close $f
+set fp [open "input.txt" w+]
+puts $fp "test"
+close $fp
+set fp [open "input.txt" r]
+set file_data [read $fp]
+puts $file_data
+close $fp
 ```
