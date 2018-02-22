@@ -1,4 +1,6 @@
-**variables**
+## Variable
+
+**Initializing variables**
 
 ```
 Variables in TCL:
