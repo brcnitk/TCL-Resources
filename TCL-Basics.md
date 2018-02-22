@@ -132,6 +132,20 @@ set marks(mathematics) 90
 puts $marks(mathematics)
 ```
 
+**Size of arrays**
+```
+set languages(0) Tcl
+set languages(1) "C Language"
+puts  [array size languages]
+```
+
+**Indices of arrays**
+```
+set personA(Name) "Dave"
+set personA(Age) 14
+puts [array names personA]
+```
+
 ## Procedure
 
 ```
