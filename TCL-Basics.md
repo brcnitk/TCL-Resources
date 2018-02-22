@@ -16,7 +16,6 @@ puts $env(PATH)
 **Initializing variables**
 
 ```
-Variables in TCL:
 set <variable_name> <variable_value>
 ```
 ```
@@ -43,7 +42,7 @@ set y 20
 puts "value of x is $x"
 puts "value of y is $y"
 ```
-
+## Mathematical operations
 **expr**
 ```
 Example 1:
@@ -103,6 +102,7 @@ puts $i
 }
 ```
 **List**
+
 List is nothing but a group of elements. A group of words either using double quotes or curly braces can be used to represent a simple list. 
 ```
 set myVariable {red green blue}
