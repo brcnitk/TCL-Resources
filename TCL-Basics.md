@@ -1,12 +1,15 @@
-A. variables
+**variables**
 
-# Variables in TCL
+```
+Variables in TCL:
 set <variable_name> <variable_value>
-
+```
+```
 Example:
 set a 3
 set name "abcd"
 set price 12.2
+```
 
 # Returning a value of a variable
 set a
