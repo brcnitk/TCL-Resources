@@ -64,6 +64,7 @@ puts "x is less than 50"
 }
 ```
 ```
+Example 2:
 if [ expr $x == 20 ] {
 puts "x is equal to 20"
 } else {
@@ -98,7 +99,7 @@ set a(1) 30
 puts $a(0)
 ```
 ```
-#Another Way
+Example 2:
 array set b {10,30}
 puts $b(0)
 ```
@@ -119,7 +120,6 @@ fact 5
 
 **Golabl variable in procedure**
 ```
-Example 1:
 set x 20
 proc demo { } {
   global x
