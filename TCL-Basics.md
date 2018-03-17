@@ -245,3 +245,14 @@ set file_data [read $fp]
 puts $file_data
 close $fp
 ```
+## Arguments
+```
+puts "There are $argc arguments to this script"
+puts "The name of this script is $argv0"
+
+if {$argc > 0} {puts "The other arguments are: $argv" }
+
+for {set i 0} {$i < [llength $argv]}  {incr i}  {
+   puts "arg $i is [lindex $argv $i]"
+}
+```
